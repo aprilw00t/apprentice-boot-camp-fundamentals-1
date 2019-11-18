@@ -2,7 +2,7 @@ package cards;
 
 import java.util.Scanner;
 
-class Snap {
+class Snap implements SnapPlaying {
     private int player1Score;
     private int player2Score;
     private AnimalDeck deck;
@@ -36,7 +36,6 @@ class Snap {
             } else if (input.length() > 0 && input.charAt(0) == 'l') {
                 if (currentCard.snap(previousCard)) {
                     System.out.println("SNAP! scorePlayer 2");
-                    player2Score++;
                 } else {
                     System.out.println("WRONG! deducting score from Player 2");
                     player2Score--;
