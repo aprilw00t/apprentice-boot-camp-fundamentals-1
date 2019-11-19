@@ -1,6 +1,13 @@
 package cards;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Cards {
+    String[] result = new String[52];
+
     public static void main(String[] args) {
         Cards cards = new Cards();
         String[] deckInOrder = cards.getCards();
@@ -9,8 +16,7 @@ public class Cards {
         }
     }
 
-    String[] getCards() {
-        String[] result = new String[52];
+    public String[] getCards() {
         int[][] deck = new int[52][2];
 
         for (int suit = 0; suit < 4; suit++) {
@@ -50,7 +56,10 @@ public class Cards {
 
             result[cardNumber] = faceValueName + " of " + suitName;
             cardNumber++;
+
         }
+
+
 //            String faceValueName;
 //            switch (card[1]){
 //                case 0: faceValueName = "ace"; break;
@@ -84,6 +93,13 @@ public class Cards {
 
         return result;
     }
+    void shuffle(ArrayList<String> cards){
+        Collections.shuffle(cards);
+    };
+
+
+    public Card deal(){return null; };
+
 }
 
 

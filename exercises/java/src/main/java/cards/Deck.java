@@ -1,15 +1,9 @@
 package cards;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class Deck {
-    public ArrayList<Card[]> getDeck() {
-        return Deck;
-    }
-
-    public void setDeck(ArrayList<Card[]> deck) {
-        Deck = deck;
-    }
-
-    ArrayList<Card[]> Deck;
+public interface Deck {
+    void shuffle();
+    String[] getCards();
+    AnimalCard deal();
 }

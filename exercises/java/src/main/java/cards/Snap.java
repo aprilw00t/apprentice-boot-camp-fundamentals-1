@@ -2,7 +2,7 @@ package cards;
 
 import java.util.Scanner;
 
-class Snap implements SnapPlaying {
+class Snap {
     private int player1Score;
     private int player2Score;
     private AnimalDeck deck;
