@@ -1,8 +1,6 @@
 package cards;
 
-import javax.sql.rowset.CachedRowSet;
-
-public class AnimalCard implements CardMethods {
+public class AnimalCard implements Card {
 
     private final Animal animal;
 
@@ -10,9 +8,8 @@ public class AnimalCard implements CardMethods {
         this.animal = animal;
     }
 
-    @Override
-    public boolean snap( AnimalCard otherCard ){
-        return otherCard != null && this.animal.equals(otherCard.animal);
+    public boolean snap(Card otherCard ){
+        return otherCard != null && this.animal.equals(((AnimalCard)otherCard).animal);
     }
 
     @Override

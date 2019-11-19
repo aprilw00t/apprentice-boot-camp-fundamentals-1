@@ -1,9 +1,7 @@
 package cards;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class Cards {
     String[] result = new String[52];
@@ -98,7 +96,7 @@ public class Cards {
     };
 
 
-    public Card deal(){return null; };
+    public PlayingCard deal(){return null; };
 
 }
 
